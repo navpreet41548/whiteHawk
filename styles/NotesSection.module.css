@@ -1,0 +1,279 @@
+.container {
+  min-height: 90vh;
+  margin-top: 10vh;
+  /* padding: 5% 0; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  color: #474747;
+  font-weight: 400;
+}
+
+.mainContainer {
+  width: 50%;
+  height: 220px;
+  background-color: aqua;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  margin: 3% 0;
+}
+
+.bgImage {
+  width: 100%;
+  height: auto;
+  transform: translateY(-20%);
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  background-color: #000000de;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+  align-items: center;
+}
+
+.layerContent {
+  text-align: center;
+  font-family: "Arsenal", sans-serif;
+  margin: 15px 0;
+  font-size: 25px;
+}
+
+.layerButton {
+  background-color: #ff5b25;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 20px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.color {
+  color: #ff5b25;
+}
+
+.notesImage {
+  height: auto;
+  position: absolute;
+  box-shadow: 0px 0px 5px 1px rgb(168, 168, 168);
+  border-radius: 10px;
+}
+
+.notesImage1 {
+  width: 40%;
+  left: -8%;
+  bottom: -8%;
+  z-index: 1;
+  transform: rotate(25deg);
+  animation: notes1 2s ease;
+}
+.notesImage2 {
+  width: 45%;
+  left: 50%;
+  transform: translateX(-52%);
+  z-index: 0;
+  bottom: -23%;
+  animation: notes2 2s ease;
+}
+.notesImage3 {
+  transform: rotate(334deg);
+  width: 38%;
+  right: -7%;
+  z-index: 1;
+  bottom: -30%;
+  animation: notes3 2s ease;
+}
+
+@keyframes notes1 {
+  0% {
+    transform: translateX(-100%) translateY(100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(0) rotate(25deg);
+  }
+}
+
+@keyframes notes2 {
+  0% {
+    transform: translateY(100%) translateX(-52%);
+  }
+  100% {
+    transform: translateY(0) translateX(-52%);
+  }
+}
+@keyframes notes3 {
+  0% {
+    transform: translateY(100%) translateX(100%) rotate(334deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(334deg);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .mainContainer {
+    width: 70%;
+    height: 190px;
+    margin: 2% 0;
+  }
+
+  .notesImage1 {
+    width: 40%;
+    left: -11%;
+    bottom: -18%;
+  }
+
+  .notesImage2 {
+    bottom: -38%;
+  }
+
+  .notesImage3 {
+    right: -10%;
+    bottom: -47%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .notesImage1 {
+    left: -5%;
+    bottom: -5%;
+  }
+
+  .notesImage2 {
+    bottom: -15%;
+  }
+
+  .notesImage3 {
+    right: -5%;
+    bottom: -23%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mainContainer {
+    width: 80%;
+    height: 205px;
+    margin: 4% 0;
+  }
+
+  .notesImage1 {
+    left: -17%;
+    bottom: -2%;
+    width: 56%;
+  }
+
+  .notesImage2 {
+    bottom: -9%;
+    width: 64%;
+  }
+
+  .notesImage3 {
+    right: -9%;
+    bottom: -13%;
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .layerContent {
+    margin: 5px 0;
+    font-size: 19px;
+  }
+  .layerButton {
+    padding: 7px 12px;
+    font-size: 16px;
+  }
+
+  .notesImage1 {
+    left: -18%;
+    bottom: -6%;
+    width: 418px;
+  }
+  .notesImage2 {
+    bottom: -1%;
+    width: 443px;
+  }
+
+  .notesImage3 {
+    right: -21%;
+    bottom: -12%;
+    width: 358px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainContainer {
+    height: 176px;
+    width: 95%;
+  }
+  .layer {
+    padding: 0 15px;
+  }
+  .layerContent {
+    font-size: 17px;
+  }
+
+  .layerButton {
+    margin: 10px 0;
+  }
+
+  .notesImage1 {
+    left: -21%;
+    bottom: 2%;
+    width: 338px;
+  }
+
+  .notesImage2 {
+    bottom: -13%;
+    width: 513px;
+  }
+
+  .notesImage3 {
+    right: -32%;
+    bottom: -4%;
+    width: 318px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .notesImage3 {
+    right: -55%;
+    bottom: 2%;
+  }
+
+  .notesImage2 {
+    bottom: -4%;
+    width: 343px;
+    animation: notes2a 2s ease;
+  }
+
+  .notesImage1 {
+    left: -77%;
+    bottom: 7%;
+    width: 398px;
+  }
+
+  @keyframes notes2a {
+    0% {
+      transform: translateY(100%) translateX(-52%);
+      bottom: -4%;
+    }
+    100% {
+      transform: translateY(0) translateX(-52%);
+      bottom: -4%;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.errMessage {
+  margin-top: -100px;
+  background-color: white;
+  color: #474747;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ff5b25;
+}

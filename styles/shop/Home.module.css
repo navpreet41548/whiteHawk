@@ -1,0 +1,490 @@
+.container {
+  height: 90vh;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.searchBox {
+  background-color: white;
+  width: 50%;
+  box-shadow: 0px 0px 4px 0px rgb(165, 165, 165);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+  /* margin: 2% 0; */
+}
+
+.searchBox input {
+  flex: 0.8;
+  display: inline-block;
+  border: none;
+  padding: 8px 0;
+  padding-left: 10px;
+  font-size: 20px;
+  color: #474747;
+}
+
+.searchBox div {
+  flex: 0.2;
+  background-color: #ff5b25;
+  color: white;
+  text-align: center;
+}
+.searchBox div button {
+  background-color: #ff5b25;
+  color: white;
+  font-size: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+}
+
+.subContainer {
+  display: flex;
+  padding: 0 10%;
+  justify-content: space-between;
+}
+
+.left {
+  width: 45%;
+  padding-top: 2%;
+}
+
+.mainHeading {
+  font-size: 45px;
+  color: #474747;
+  font-family: "Arsenal", sans-serif;
+}
+
+.subHeading {
+  font-size: 22px;
+  color: #474747;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.para {
+  font-size: 22px;
+  color: #474747;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.button {
+  background-color: #ff5b25;
+  color: white;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  font-weight: 300;
+  border-radius: 5px;
+  padding: 13px 25px;
+  margin-top: 20px;
+}
+
+.right {
+  width: 30%;
+  height: 50vh;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 1px grey;
+}
+
+.image1 {
+  width: 45%;
+  height: 55%;
+}
+.image2 {
+  width: 60%;
+  height: 40%;
+  bottom: 0px;
+  left: -100px;
+}
+.image3 {
+  width: 54%;
+  height: 43%;
+  right: 0;
+  bottom: -30px;
+}
+.image4 {
+  z-index: 1;
+  width: 44%;
+  height: 53%;
+  top: 25%;
+  left: 25%;
+}
+.image5 {
+  width: 48%;
+  height: 40%;
+  right: 0;
+  top: 30px;
+}
+
+.color {
+  color: #ff5b25 !important;
+}
+
+.qualityWrapper {
+  display: flex;
+  margin-top: 4%;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.qualityContainer {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #757575;
+}
+
+.qualityContainer4 {
+  border-right: none;
+}
+
+.qualityContainer i {
+  font-size: 35px;
+  color: #ff5b25;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.qualityHeading {
+  font-size: 20px;
+  font-weight: normal;
+  color: #474747;
+}
+.qualityPara {
+  font-size: 15px;
+  color: #757575;
+}
+
+@media screen and (max-width: 1600px) {
+  .mainHeading {
+    font-size: 35px;
+  }
+  .subHeading {
+    font-size: 18px;
+  }
+  .para {
+    font-size: 18px;
+  }
+  .button {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+  .right {
+    width: 28%;
+    height: 45vh;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .searchBox input {
+    font-size: 17px;
+  }
+
+  .searchBox div button {
+    padding: 10px;
+  }
+
+  .mainHeading {
+    font-size: 30px;
+  }
+  .subHeading {
+    font-size: 17px;
+    margin: 5px 0;
+  }
+
+  .para {
+    font-size: 17px;
+    margin: 0;
+  }
+
+  .button {
+    font-size: 17px;
+    padding: 10px 15px;
+  }
+  .left {
+    width: 55%;
+  }
+  .right {
+    width: 26%;
+    height: 43vh;
+  }
+
+  .qualityContainer i {
+    font-size: 25px;
+    margin-right: 15px;
+  }
+
+  .qualityHeading {
+    font-size: 17px;
+  }
+
+  .qualityPara {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .subContainer {
+    padding: 0 7%;
+  }
+  .qualityWrapper {
+    width: 86%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .mainHeading {
+    font-size: 25px;
+  }
+  .subHeading {
+    font-size: 15px;
+  }
+  .para {
+    font-size: 15px;
+  }
+  .button {
+    font-size: 15px;
+  }
+
+  .image2 {
+    width: 65%;
+    left: -60px;
+  }
+
+  .qualityHeading {
+    font-size: 15px;
+  }
+  .qualityPara {
+    font-size: 10px;
+  }
+
+  .searchBox input {
+    padding: 7px 0;
+    padding-left: 10px;
+    font-size: 15px;
+  }
+
+  .searchBox div button {
+    font-size: 15px;
+    padding: 8px;
+    font-weight: normal;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    height: auto;
+    margin-top: 15vh;
+  }
+  .searchBox {
+    width: 80%;
+  }
+  .searchBox input {
+    padding: 10px 0;
+    padding-left: 15px;
+    font-size: 17px;
+  }
+
+  .searchBox div button {
+    padding: 12px;
+  }
+
+  .subContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .left {
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .imageContainer {
+    width: 70%;
+    height: 70%;
+  }
+
+  .right {
+    width: 360px;
+    height: 37vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image1 {
+    width: 46%;
+    height: 65%;
+    top: -20px;
+  }
+
+  .image2 {
+    width: 65%;
+    left: -50px;
+  }
+
+  .image3 {
+    width: 54%;
+    height: 48%;
+    right: -20px;
+    bottom: -20px;
+  }
+
+  .image4 {
+    width: 54%;
+    height: 73%;
+    top: 10%;
+    left: 20%;
+  }
+
+  .image5 {
+    width: 50%;
+    height: 46%;
+    right: -30px;
+    top: 0px;
+  }
+
+  .mainHeading {
+    font-size: 28px;
+  }
+  .qualityContainer i {
+    margin-right: 10px;
+  }
+  .qualityHeading {
+    font-size: 10px;
+  }
+  .qualityPara {
+    font-size: 7px;
+  }
+
+  .qualityWrapper {
+    margin: 4%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .searchBox {
+    width: 90%;
+  }
+  .subContainer {
+    padding: 0 3%;
+  }
+  .qualityContainer i {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .qualityWrapper {
+    width: 100%;
+    margin: 7%;
+  }
+  .qualityContainer i {
+    font-size: 17px;
+  }
+  .qualityHeading {
+    font-size: 7px;
+  }
+
+  .qualityPara {
+    font-size: 5px;
+  }
+  .right {
+    width: 345px;
+    height: 40vh;
+  }
+  .mainHeading {
+    font-size: 26px;
+  }
+  .button {
+    padding: 12px 35px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .searchBox {
+    width: 95%;
+  }
+
+  .right {
+    width: 290px;
+    height: 33vh;
+  }
+
+  .mainHeading {
+    font-size: 24px;
+  }
+
+  .image2 {
+    width: 65%;
+    left: -30px;
+  }
+
+  .image3 {
+    width: 61%;
+    height: 48%;
+    right: -40px;
+    bottom: -20px;
+  }
+  .image4 {
+    width: 50%;
+    height: 70%;
+    top: 16%;
+    left: 30%;
+  }
+  .image5 {
+    width: 55%;
+    height: 50%;
+    right: -30px;
+  }
+  .subHeading {
+    font-size: 13px;
+  }
+
+  .para {
+    font-size: 13px;
+  }
+  .button {
+    padding: 12px 35px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .mainHeading {
+    font-size: 22px;
+  }
+  .qualityHeading {
+    font-size: 6px;
+  }
+  .qualityPara {
+    font-size: 4px;
+  }
+  .qualityContainer i {
+    margin-right: 2px;
+    font-size: 15px;
+  }
+  .button {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,48 @@
+.container {
+  min-height: 90vh;
+  margin-top: 10vh;
+  position: relative;
+  /* padding-top: 3vh; */
+}
+
+.breadCrumb {
+  margin-left: 10%;
+  margin-top: 12vh;
+  margin-bottom: 2vh;
+
+  top: 0;
+  color: #474747;
+  width: 520px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.color {
+  color: #ff5b25;
+}
+
+@media screen and (max-width: 1600px) {
+  .breadCrumb {
+    margin-left: 6%;
+    /* margin-top: 0; */
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .breadCrumb {
+    margin-left: 6%;
+    margin-top: 14vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  .breadCrumb {
+    margin-left: 5%;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .breadCrumb {
+    width: 250px;
+  }
+}

@@ -1,0 +1,232 @@
+/*! About Section */
+
+.aboutContainer {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutTitle {
+  color: #474747;
+  font-weight: 400;
+}
+
+.aboutSubContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  width: 100vw;
+  margin: 30px;
+}
+
+.aboutLeft {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutImageWrapper {
+  position: relative;
+}
+.aboutImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 1px rgb(203, 203, 203);
+}
+
+.aboutImageTitle {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(50%) translateX(-50%);
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 30px;
+  font-weight: 300;
+  padding: 5px 30px;
+  border-radius: 5px;
+  border: 2px solid white;
+  box-shadow: 0px 5px 5px 1px rgb(160, 160, 160);
+}
+.aboutSocialContainer {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #255881;
+  color: white;
+  padding: 10px 5px;
+  border-radius: 0px 5px 5px 0;
+}
+
+.aboutSocialContainer a i {
+  font-size: 35px;
+}
+.aboutRight {
+  width: 50%;
+}
+
+.aboutHeading {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.aboutSubHeading {
+  font-size: 20px;
+  color: #474747;
+  margin: 10px 0;
+  margin-top: 0px;
+}
+
+.aboutPara {
+  font-size: 20px;
+  font-weight: 300;
+  color: #474747;
+}
+
+.color {
+  color: #ff5b25 !important;
+}
+.color2 {
+  color: #ff5b25 !important;
+  font-size: 25px;
+}
+
+.color3 {
+  color: #255881;
+}
+
+@media screen and (max-width: 1450px) {
+  .aboutContainer {
+    min-height: 88vh;
+  }
+
+  .aboutHeading {
+    font-size: 35px;
+  }
+  .aboutSubHeading {
+    font-size: 18px;
+  }
+  .aboutPara {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .aboutSubContainer {
+    padding: 0 7%;
+  }
+  .aboutImageTitle {
+    font-size: 20px;
+    padding: 5px 20px;
+  }
+
+  .aboutSocialContainer {
+    top: 10px;
+    padding: 5px 3px;
+  }
+  .aboutSocialContainer a i {
+    font-size: 23px;
+  }
+
+  .aboutHeading {
+    font-size: 25px;
+  }
+
+  .aboutSubHeading {
+    font-size: 16px;
+  }
+  .aboutPara {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .aboutTitle {
+    font-size: 18px;
+  }
+  .aboutSubContainer {
+    margin: 20px;
+  }
+  .aboutHeading {
+    font-size: 23px;
+  }
+  .aboutSubHeading {
+    font-size: 15px;
+  }
+  .aboutPara {
+    font-size: 14px;
+  }
+  .aboutImageTitle {
+    font-size: 17px;
+    padding: 5px 15px;
+  }
+
+  .aboutSocialContainer a i {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .aboutTitle {
+    font-size: 20px;
+  }
+  .aboutSubContainer {
+    margin: 0px;
+    flex-direction: column;
+  }
+  .aboutLeft {
+    width: 100%;
+    margin: 50px 0;
+    align-items: center;
+  }
+
+  .aboutImageWrapper {
+    width: 65%;
+  }
+  .aboutRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutHeading {
+    text-align: center;
+    font-size: 25px;
+  }
+  .aboutSubHeading {
+    text-align: center;
+    font-size: 17px;
+  }
+  .aboutPara {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aboutSubContainer {
+    padding: 0 3%;
+  }
+  .aboutSubHeading {
+    font-size: 16px;
+  }
+  .aboutPara {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .aboutImageWrapper {
+    width: 75%;
+  }
+}

@@ -1,0 +1,306 @@
+.formContainer {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(176, 176, 176);
+  height: 63vh;
+  position: relative;
+}
+
+.left {
+  position: relative;
+  width: 43%;
+  overflow: hidden;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.leftTopHeading {
+  font-weight: normal;
+}
+
+.leftTopPara {
+  font-weight: 300;
+}
+
+.leftContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.701);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.mapImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.leftCenterContent {
+  width: 90%;
+}
+
+.infoWrapper {
+  display: flex;
+  /* align-items: center; */
+  margin: 20px 0;
+}
+
+.infoWrapper i {
+  font-size: 25px;
+  color: #ff5b25;
+  margin-right: 10px;
+}
+
+.infoWrapper p {
+  font-weight: 300;
+}
+
+.leftBottomContent i {
+  font-size: 25px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.leftBottomContent i:hover {
+  color: #ff5b25;
+}
+
+.right {
+  box-shadow: 0px 0px 3px 1px rgb(222, 222, 222);
+  width: 57%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 20px;
+  align-items: center;
+  border-radius: 0px 5px 5px 0;
+}
+
+.rightHeading {
+  font-weight: 300;
+  font-size: 25px;
+  color: #ff5b25;
+}
+
+.formWrapper {
+  width: 90%;
+}
+
+.inputWrapper {
+  box-shadow: 0px 0px 3px 1px rgb(202, 202, 202);
+  border-radius: 4px;
+  display: flex;
+  margin: 35px 0;
+  position: relative;
+}
+
+.inputWrapper i {
+  font-size: 25px;
+  color: #ff5b25;
+  margin: 0 10px;
+  margin-top: 7px;
+}
+
+.input {
+  padding: 10px 0;
+  width: 100%;
+  font-size: 17px;
+  border: none;
+  color: #474747;
+  padding-right: 10px;
+}
+
+.textarea {
+  min-height: 15vh;
+  resize: none;
+  outline: none;
+  padding-right: 10px;
+}
+
+.button {
+  background-color: #ff5b25;
+  border: none;
+  color: white;
+  padding: 10px 0;
+  width: 40%;
+  border-radius: 4px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.errMessage {
+  font-size: 15px;
+  color: red;
+  position: absolute;
+  top: -25px;
+}
+
+.messageContainer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  animation: animate 0.5s ease;
+  z-index: 1;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.messageSubContainer {
+  background-color: white;
+  box-shadow: 0px 0px 3px 1px rgb(204, 204, 204);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  color: rgb(61, 182, 61);
+}
+
+.messageContainer p {
+  display: flex;
+  align-items: center;
+}
+
+/* 
+.messageSubContainer {
+  background-color: white;
+  border: 1px solid #ff5b25;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+.messageSubContainer p {
+  font-size: 17px;
+  color: #474747;
+}
+
+.close {
+  bottom: 100%;
+  right: 0;
+  border: none;
+  color: #ff5b25;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 17px;
+  position: absolute;
+} */
+
+@media screen and (max-width: 1400px) {
+  .formContainer {
+    width: 80%;
+    height: 74vh;
+  }
+  .leftTopHeading {
+    font-size: 20px;
+  }
+  .leftTopPara {
+    font-size: 15px;
+  }
+  .infoWrapper i {
+    font-size: 20px;
+  }
+  .infoWrapper p {
+    font-size: 15px;
+  }
+
+  .inputWrapper i {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  .input {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .formContainer {
+    width: 90%;
+    height: 74vh;
+  }
+  .leftTopHeading {
+    font-size: 17px;
+  }
+  .leftTopPara {
+    font-size: 14px;
+  }
+  .infoWrapper p {
+    font-size: 14px;
+  }
+
+  .inputWrapper i {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  .rightHeading {
+    font-size: 20px;
+  }
+  .input {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .formContainer {
+    width: 100%;
+    height: 60vh;
+    margin-top: 30px;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .rightHeading {
+    font-size: 25px;
+  }
+
+  .inputWrapper i {
+    font-size: 25px;
+  }
+
+  .input {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .formWrapper {
+    width: 100%;
+  }
+  .right {
+    padding: 0;
+    box-shadow: none;
+  }
+  .button {
+    width: 55%;
+  }
+}

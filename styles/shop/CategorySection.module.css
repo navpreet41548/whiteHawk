@@ -1,0 +1,24 @@
+.swiperContainer {
+  padding-left: 100px !important;
+  margin: 3% 0;
+}
+
+.title {
+  color: #474747;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  margin: 2% 0;
+}
+
+@media screen and (max-width: 1050px) {
+  .title {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .swiperContainer {
+    padding-left: 50px !important;
+    margin: 10% 0;
+  }
+}

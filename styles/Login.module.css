@@ -1,0 +1,141 @@
+.container {
+  position: fixed;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.773);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease;
+  opacity: 1;
+}
+
+.formContainer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+}
+
+.heading {
+  color: #ff5b25;
+  font-weight: 300;
+}
+
+.subHeading {
+  color: #474747;
+  font-size: 15px;
+}
+
+.message {
+  color: #474747;
+  font-size: 15px;
+}
+
+.inputContainer {
+  width: 80%;
+}
+
+.inputWrapper {
+  box-shadow: 0px 0px 3px 1px rgb(215, 215, 215);
+  margin: 20px 0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.inputWrapper i {
+  color: #ff5b25;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 10px 0;
+  color: #474747;
+  border: none;
+  font-size: 17px;
+}
+
+.button {
+  background-color: #ff5b25;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 35%;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.lastPara {
+  color: #474747;
+  font-size: 15px;
+}
+
+.color {
+  color: #ff5b25;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-100%);
+  cursor: pointer;
+}
+
+.close i {
+  color: white;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 1500px) {
+  .formContainer {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .formContainer {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .formContainer {
+    width: 70%;
+  }
+  .inputContainer {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .formContainer {
+    width: 80%;
+  }
+  .message {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .formContainer {
+    width: 90%;
+  }
+  .inputContainer {
+    width: 95%;
+  }
+  .heading {
+    font-size: 25px;
+  }
+}

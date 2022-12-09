@@ -1,0 +1,192 @@
+.formFileUpload {
+  height: 16rem;
+  width: 80%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.inputFileUpload {
+  display: none;
+}
+
+#labelFileUpload {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: #cbd5e1;
+  background-color: rgba(0, 0, 0, 0.866);
+  color: #ff5b25;
+  transition: all 0.3s ease;
+  padding: 0 10px;
+}
+
+.uploadButton {
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  border: none;
+  font-family: "Oswald", sans-serif;
+  background-color: transparent;
+  color: white;
+}
+
+.uploadButton:hover {
+  text-decoration-line: underline;
+}
+
+.dragActive {
+  /* background-color: #ffffff !important; */
+  /* border: 1px dashed #ff5b25 !important; */
+  transform: scale(1.1);
+}
+
+.dragFileElement {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.dragDropWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.imageWrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: -1;
+  box-shadow: 0px 0px 5px 1px rgb(212, 212, 212);
+  border-radius: 3px;
+}
+.selectedImage {
+  width: 100%;
+  height: 100%;
+}
+
+.submitButton {
+  background-color: #ff5b25;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  padding: 7px 15px;
+  border-radius: 3px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.submitButtonContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.ratioButtonContainer {
+  position: absolute;
+  top: 10px;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.ratioButtonContainer button {
+  cursor: pointer;
+  background-color: white;
+  color: #ff5b25;
+  padding: 7px 0;
+  width: 45%;
+  border-radius: 3px;
+  font-size: 13px;
+  border: none;
+  box-shadow: 0px 0px 3px 1px rgb(187, 187, 187);
+}
+
+.maintainRatio {
+  height: 100%;
+  width: auto;
+}
+
+.errContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.888);
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.errContainer h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.errContainer button {
+  background-color: #ff5b25;
+  padding: 8px 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.loadingContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.708);
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.loadingContainer i {
+  color: #ff5b25;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 1400px) {
+  .ratioButtonContainer button {
+    font-size: 12px;
+  }
+  .formFileUpload {
+    height: 13rem;
+  }
+  #labelFileUpload {
+    font-size: 12px;
+  }
+  .uploadButton {
+    font-size: 13px;
+  }
+  .submitButton {
+    font-size: 14px;
+  }
+}

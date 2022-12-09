@@ -1,0 +1,44 @@
+.container {
+  min-height: 90vh;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2% 10%;
+}
+
+.productWrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.breadCrumb {
+  color: #474747;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.current {
+  color: #ff5b25;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    min-height: 88vh;
+    margin-top: 12vh;
+  }
+  .breadCrumb {
+    margin: 10px 0;
+  }
+}
+@media screen and (max-width: 850px) {
+  .productWrapper {
+    justify-content: center;
+  }
+
+  .container {
+    padding: 2% 5%;
+  }
+}
