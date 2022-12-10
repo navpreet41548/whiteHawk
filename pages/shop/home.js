@@ -32,7 +32,14 @@ export async function getServerSideProps(context) {
     method: "GET",
   });
   const dbData = await data.json();
-  return {
-    props: { categories: dbData.data }, // will be passed to the page component as props
-  };
+  if (!dbData.err) {
+    return {
+      props: { categories: dbData.data }, // will be passed to the page component as props
+    };
+  }
+  if (dbData.err) {
+    return {
+      props: { categories: {} }, // will be passed to the page component as props
+    };
+  }
 }
