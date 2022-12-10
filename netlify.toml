@@ -2,7 +2,6 @@
   command = "npm run build"
   publish = ".next"
   base ="/"
-  publish = "dist"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
