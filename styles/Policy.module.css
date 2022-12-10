@@ -1,0 +1,7 @@
+.container {
+  max-height: 90vh;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

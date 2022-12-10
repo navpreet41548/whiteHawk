@@ -10,7 +10,7 @@ export async function middleware(NextRequest) {
 
   const token = NextRequest.cookies.get("token");
   if (!token) {
-    return NextResponse.redirect(`${process.env.BASE_URL}/home`);
+    return NextResponse.redirect(`${process.env.BASE_URL}/`);
   }
   try {
     //!Verify the token
@@ -27,17 +27,17 @@ export async function middleware(NextRequest) {
     console.log(data);
     if (data.err) {
       console.log(data.err);
-      return NextResponse.redirect(`${process.env.BASE_URL}/home`);
+      return NextResponse.redirect(`${process.env.BASE_URL}/`);
     }
     if (data.data.admin) {
       const res = NextResponse.next();
       return res;
     } else {
-      return NextResponse.redirect(`${process.env.BASE_URL}/home`);
+      return NextResponse.redirect(`${process.env.BASE_URL}/`);
     }
   } catch (err) {
     console.log(err);
-    return NextResponse.redirect(`${process.env.BASE_URL}/home`);
+    return NextResponse.redirect(`${process.env.BASE_URL}/`);
   }
 }
 

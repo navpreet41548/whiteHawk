@@ -140,7 +140,7 @@ const Header = () => {
           <div className={`${styles.center}`}>
             <ul>
               <li className={styles.centerLi}>
-                <Link href="/home">HOME</Link>
+                <Link href="/">HOME</Link>
               </li>
               <li className={styles.centerLi}>
                 <Link href="/shop/home">SHOP</Link>
@@ -197,7 +197,7 @@ const Header = () => {
           <div className={`${styles.center} ${styles.transform}`}>
             <ul>
               <li className={styles.centerLi}>
-                <Link href="/home">HOME</Link>
+                <Link href="/">HOME</Link>
               </li>
               <li className={styles.centerLi}>
                 <Link href="/shop/home">SHOP</Link>

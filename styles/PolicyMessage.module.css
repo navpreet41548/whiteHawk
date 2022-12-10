@@ -1,0 +1,59 @@
+.policyContainer {
+  width: 60%;
+  text-align: center;
+  box-shadow: 0px 0px 3px 1px rgb(217, 217, 217);
+  padding: 20px 0;
+  border-radius: 10px;
+  margin: 5% 0;
+}
+.heading {
+  color: white;
+  font-weight: normal;
+  margin-bottom: 20px;
+  background-color: #1e1e1e;
+  width: 100%;
+  border-bottom: 1px solid #ff5b25;
+  border-top: 1px solid #ff5b25;
+}
+.para {
+  max-height: 50vh;
+  font-size: 15px;
+  color: #474747;
+  padding: 0 30px;
+  overflow-y: scroll;
+}
+
+.color {
+  color: #ff5b25;
+}
+@media screen and (max-width: 1500px) {
+  .policyContainer {
+    width: 80%;
+  }
+  .heading {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .policyContainer {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .policyContainer {
+    margin: 15% 0;
+  }
+  .heading {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .para {
+    height: 50vh;
+    font-size: 13px;
+    color: #474747;
+    padding: 0 10px;
+    overflow-y: scroll;
+  }
+}

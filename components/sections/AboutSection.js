@@ -20,13 +20,13 @@ const AboutSection = () => {
               <p>JP BRAR</p>
             </div>
             <div className={styles.aboutSocialContainer}>
-              <a href="/">
+              <a href="https://www.instagram.com/brar_scribbles/">
                 <i class="bx bxl-instagram"></i>
               </a>
-              <a href="/">
+              <a href="https://www.facebook.com/brar.scribbles">
                 <i class="bx bxl-facebook-square"></i>
               </a>
-              <a href="/">
+              <a href="https://www.youtube.com/@BrarScribbles">
                 <i class="bx bxl-youtube"></i>
               </a>
             </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import styles from "../../styles/NotesSection.module.css";
 
@@ -23,7 +24,12 @@ const NotesSection = () => {
             <span className={styles.color}>CHEAT SHEETS </span> etc.
           </h1>
 
-          <button className={styles.layerButton}>SHOP NOW</button>
+          <Link
+            href={"/shop/products/allProducts"}
+            className={styles.layerButton}
+          >
+            SHOP NOW
+          </Link>
         </div>
       </div>
       <Image

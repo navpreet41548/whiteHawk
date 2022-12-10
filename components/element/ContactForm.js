@@ -119,10 +119,18 @@ const ContactForm = () => {
             </div>
           </div>
           <div className={styles.leftBottomContent}>
-            <i class="bx bxl-pinterest"></i>
-            <i class="bx bxl-instagram-alt"></i>
-            <i class="bx bxl-gmail"></i>
-            <i class="bx bxl-youtube"></i>
+            <a href="https://in.pinterest.com/brarscribbles/">
+              <i class="bx bxl-pinterest"></i>
+            </a>
+            <a href="https://www.instagram.com/brar_scribbles/">
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCP7baQZYF2uL-s5-c8arukQ?view_as=subscriber">
+              <i class="bx bxl-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/brar.scribbles">
+              <i class="bx bxl-facebook"></i>
+            </a>
           </div>
         </div>
       </div>

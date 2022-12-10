@@ -1,9 +1,47 @@
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../../styles/HomeSection.module.css";
+import Typed from "typed.js";
+import Router from "next/router";
+import Link from "next/link";
 
 const HomeSection = () => {
+  const el = useRef(null);
+
+  const [searchValue, setSearchValue] = useState("");
+
+  const onSearch = () => {
+    // const tagArrays = searchValue.split(" ");
+    // const searchQuery = "search" + searchValue;
+
+    const camelCase = searchValue
+      .replace(/\s(.)/g, function (a) {
+        return a.toUpperCase();
+      })
+      .replace(/\s/g, "")
+      .replace(/^(.)/, function (b) {
+        return b.toLowerCase();
+      });
+    const searchQuery =
+      "search" + camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
+    Router.push(`/shop/products/${searchQuery}`);
+    // Router.push("/");
+  };
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["Teacher", "Artist"],
+      startDelay: 300,
+      typeSpeed: 150,
+      backDelay: 150,
+      backSpeed: 150,
+      smartBackspace: true,
+      showCursor: true,
+      loop: true,
+    });
+  }, []);
+
   return (
     <div className={styles.homeContainer}>
       <Head>
@@ -31,24 +69,28 @@ const HomeSection = () => {
             styles={styles.searchInput}
             type="text"
             placeholder="Type to Search Shop..."
+            value={searchValue}
+            onChange={(e) => {
+              setSearchValue(e.target.value);
+            }}
           />
           <div styles={styles.searchButton}>
-            <button>Search</button>
+            <button onClick={() => onSearch()}>Search</button>
           </div>
         </div>
 
         <div className={styles.socialIcons}>
-          <a href="/">
+          <a href="https://www.instagram.com/brar_scribbles/">
             <i className="bx bxl-instagram"></i>
           </a>
-          <a href="/">
-            <i className="bx bxl-twitter"></i>
+          <a href="https://in.pinterest.com/brarscribbles/">
+            <i class="bx bxl-pinterest"></i>
           </a>
-          <a href="/">
+          <a href="https://www.facebook.com/brar.scribbles">
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a href="https://www.youtube.com/@BrarScribbles">
             <i className="bx bxl-youtube"></i>
-          </a>
-          <a href="/">
-            <i className="bx bxl-facebook"></i>
           </a>
         </div>
       </div>
@@ -69,9 +111,9 @@ const HomeSection = () => {
         />
 
         <div className={styles.message}>
-          <p>
-            Hi, I’M JP Brar <br /> I’M
-            <span className={styles.color2}> TEACHER..</span>
+          <p className={styles.animationPara}>
+            Hi, I’M JP Brar <br /> I’M{" "}
+            <span ref={el} className={styles.color2}></span>
           </p>
         </div>
       </div>

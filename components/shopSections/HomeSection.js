@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Router from "next/router";
 import React, { useState } from "react";
 import styles from "../../styles/shop/Home.module.css";
@@ -19,7 +20,6 @@ const HomeSection = () => {
       });
     const searchQuery =
       "search" + camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
-    console.log("DKLDF ", searchQuery);
     Router.push(`/shop/products/${searchQuery}`);
     // Router.push("/");
   };
@@ -60,7 +60,9 @@ const HomeSection = () => {
             <span className={styles.color}> enjoyable </span>
             Learning Resources.
           </p>
-          <button className={styles.button}>SHOP NOW</button>
+          <Link href={"/shop/products/allProducts"} className={styles.button}>
+            SHOP NOW
+          </Link>
         </div>
         <div className={styles.right}>
           <div className={styles.imageContainer}>

@@ -67,7 +67,7 @@ const TeamSection = () => {
             <a href="">
               <i class="bx bx-phone"></i>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/avtarbrar2108/">
               <i class="bx bxl-instagram"></i>
             </a>
             <a href="">
@@ -94,7 +94,7 @@ const TeamSection = () => {
             <a href="">
               <i class="bx bx-phone"></i>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/avtarbrar2108/">
               <i class="bx bxl-instagram"></i>
             </a>
             <a href="">
@@ -121,7 +121,7 @@ const TeamSection = () => {
             <a href="">
               <i class="bx bx-phone"></i>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/avtarbrar2108/">
               <i class="bx bxl-instagram"></i>
             </a>
             <a href="">
@@ -148,7 +148,7 @@ const TeamSection = () => {
             <a href="">
               <i class="bx bx-phone"></i>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/avtarbrar2108/">
               <i class="bx bxl-instagram"></i>
             </a>
             <a href="">
@@ -175,7 +175,7 @@ const TeamSection = () => {
             <a href="">
               <i class="bx bx-phone"></i>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/avtarbrar2108/">
               <i class="bx bxl-instagram"></i>
             </a>
             <a href="">

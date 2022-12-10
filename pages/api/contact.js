@@ -3,6 +3,8 @@
 import Contact from "../../models/Contact";
 import dbConnect from "../../utils/dbConnect";
 import mail from "@sendgrid/mail";
+import nodemailer from "nodemailer";
+import smtpTransport from "nodemailer-smtp-transport";
 
 dbConnect();
 
@@ -14,27 +16,40 @@ export default async function handler(req, res) {
       const form = new Contact({ name, email, subject, message, user });
       const savedForm = await form.save();
 
-      mail.setApiKey(process.env.SENDGRID_API_KEY);
+      let transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          type: "OAuth2",
+          user: process.env.MAIL_USERNAME,
+          pass: process.env.MAIL_PASSWORD,
+          clientId: process.env.OAUTH_CLIENTID,
+          clientSecret: process.env.OAUTH_CLIENT_SECRET,
+          refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+        },
+      });
 
-      const formData = `
-  Name: ${name}rn
-  Email: ${email}rn
-  Subject: ${subject}rn
-  Message: ${message}
-`;
-
-      const mailSent = await mail.send({
-        to: "navpreetsingh41548@gmail.com",
+      var mailOptions = {
         from: "whitehawkform@gmail.com",
-        subject: "New Form!",
-        text: message,
-        html: message.replace(/rn/g, "<br>"),
+        to: "navpreetsingh41548@gmail.com",
+        subject: `New Form Submitted by ${name}`,
+        text: ` 
+        Email:${email}
+        Subject:${subject}
+        Message:${message}
+         `,
+      };
+
+      transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log("Email sent: " + info.response);
+        }
       });
 
       //! Sending JSON response
       res.json({
         err: null,
-        mailSent,
         message: "Form Saved Successfully",
         data: null,
       });

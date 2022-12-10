@@ -30,6 +30,29 @@ input {
   outline: none;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+  border: 1px solid #ff5b25;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #606060;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0e0e0e;
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

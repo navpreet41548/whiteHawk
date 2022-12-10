@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import styles from "../styles/Footer.module.css";
 
@@ -35,39 +36,38 @@ const Footer = () => {
             <h1 className={styles.contactHeading}>+91 84279-76607</h1>
           </div>
           <div className={styles.socialContainer}>
-            <a href="">
+            <a href="https://in.pinterest.com/brarscribbles/">
               <i class="bx bxl-pinterest"></i>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/brar_scribbles/">
               <i class="bx bxl-instagram"></i>
             </a>
-            <a href="">
-              <i className="bx bxl-gmail"></i>
-            </a>
-            <a href="">
+            <a href="https://www.youtube.com/channel/UCP7baQZYF2uL-s5-c8arukQ?view_as=subscriber">
               <i class="bx bxl-youtube"></i>
             </a>
-            <a href="">
-              <i class="bx bxl-twitter"></i>
+            <a href="https://www.facebook.com/brar.scribbles">
+              <i class="bx bxl-facebook"></i>
             </a>
           </div>
         </div>
         <div className={styles.center}>
           <h1 className={styles.linkHeading}>QUICK LINKS</h1>
           <h5 className={styles.link}>
-            <a href="">FAQS</a>
+            <Link href="/contact">FAQS</Link>
           </h5>
           <h5 className={styles.link}>
-            <a href="">Refunds & Cancelation</a>
+            <Link href="/policy/refund-and-cancelation">
+              Refunds & Cancelation
+            </Link>
           </h5>
           <h5 className={styles.link}>
-            <a href="">Disclaimer</a>
+            <Link href="/policy/disclaimer">Disclaimer</Link>
           </h5>
           <h5 className={styles.link}>
-            <a href="">Terms & Conditions</a>
+            <Link href="/policy/terms-and-condition">Terms & Conditions</Link>
           </h5>
           <h5 className={styles.link}>
-            <a href="">Privacy</a>
+            <Link href="/policy/privacy">Privacy</Link>
           </h5>
         </div>
         <div className={styles.right}>
@@ -76,9 +76,9 @@ const Footer = () => {
             width="400"
             className={styles.map}
             height="300"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
           {/* <iframe
             className={styles.map}
@@ -91,6 +91,14 @@ const Footer = () => {
       <h3 className={styles.copyright}>
         All rights reserved @2022 |
         <span className={styles.color}> Brar Scribble</span> & WhiteHawk Academy
+        <span className={styles.attribute}>
+          Designed & Developed by{" "}
+          <span className={styles.color}>
+            <Link href={"https://www.instagram.com/navpreet_singh4455/"}>
+              Navpreet Singh
+            </Link>
+          </span>
+        </span>
       </h3>
     </div>
   );
