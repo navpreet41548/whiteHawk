@@ -24,6 +24,7 @@ export default function Home() {
     <Layout>
       <div className={styles.wrapper}>
         <HomeSection />
+        {process.env && process.env.BASE_URL}
         <AboutSection />
         <TeamSection />
         <NotesSection />
