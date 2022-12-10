@@ -10,11 +10,11 @@ export async function middleware(NextRequest) {
 
   const token = NextRequest.cookies.get("token");
   if (!token) {
-    return NextResponse.redirect("http://localhost:3000/home");
+    return NextResponse.redirect(`${process.env.BASE_URL}/home`);
   }
   try {
     //!Verify the token
-    const resp = await fetch("http://localhost:3000/api/auth/verify", {
+    const resp = await fetch(`${process.env.BASE_URL}/api/auth/verify`, {
       method: "GET",
       credentials: "include",
       headers: {
@@ -27,17 +27,17 @@ export async function middleware(NextRequest) {
     console.log(data);
     if (data.err) {
       console.log(data.err);
-      return NextResponse.redirect("http://localhost:3000/home");
+      return NextResponse.redirect(`${process.env.BASE_URL}/home`);
     }
     if (data.data.admin) {
       const res = NextResponse.next();
       return res;
     } else {
-      return NextResponse.redirect("http://localhost:3000/home");
+      return NextResponse.redirect(`${process.env.BASE_URL}/home`);
     }
   } catch (err) {
     console.log(err);
-    return NextResponse.redirect("http://localhost:3000/home");
+    return NextResponse.redirect(`${process.env.BASE_URL}/home`);
   }
 }
 
