@@ -278,6 +278,7 @@ const CategoryElement = (props) => {
                 width="500"
                 height={"500"}
                 alt="Category Image"
+                loading="lazy"
               />
             )}
             <div class={styles.inputWrapper}>
@@ -304,6 +305,7 @@ const CategoryElement = (props) => {
               width="500"
               height={"500"}
               alt="Category Image"
+              loading="lazy"
             />
             <div className={styles.layer}>
               <p className={styles.button}>

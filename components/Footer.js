@@ -15,6 +15,7 @@ const Footer = () => {
               width="200"
               height={"200"}
               alt="Logo"
+              loading="lazy"
             />
             <Image
               className={`${styles.footerLogo} ${styles.footerLogo2} `}
@@ -22,6 +23,7 @@ const Footer = () => {
               width="200"
               height={"200"}
               alt="Logo"
+              loading="lazy"
             />
           </div>
           <h1 className={styles.logoHeading}>

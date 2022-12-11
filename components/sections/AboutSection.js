@@ -15,6 +15,7 @@ const AboutSection = () => {
               alt="About Image"
               width={600}
               height={600}
+              loading="lazy"
             />
             <div className={styles.aboutImageTitle}>
               <p>JP BRAR</p>

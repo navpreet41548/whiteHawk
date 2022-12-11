@@ -8,6 +8,7 @@ export default function Document() {
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
+          as="font"
         />
       </Head>
       <script defer src="/static/js/header.js"></script>

@@ -38,6 +38,7 @@ const NotesSection = () => {
         height="800"
         alt="Notes Image"
         className={`${styles.notesImage} ${styles.notesImage1}`}
+        loading="lazy"
       />
       <Image
         src="/static/images/notes/notes2.jpg"
@@ -45,6 +46,7 @@ const NotesSection = () => {
         height="800"
         alt="Notes Image"
         className={`${styles.notesImage} ${styles.notesImage2}`}
+        loading="lazy"
       />
       <Image
         src="/static/images/notes/notes3.jpg"
@@ -52,6 +54,7 @@ const NotesSection = () => {
         height="800"
         alt="Notes Image"
         className={`${styles.notesImage} ${styles.notesImage3}`}
+        loading="lazy"
       />
     </div>
   );

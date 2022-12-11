@@ -56,6 +56,7 @@ const TeamSection = () => {
               height={"200"}
               alt="j"
               className={styles.image}
+              loading="lazy"
             />
           </div>
           <h2 className={styles.heading}>AVTAR BRAR</h2>
@@ -83,6 +84,7 @@ const TeamSection = () => {
               height={"200"}
               alt="j"
               className={styles.image}
+              loading="lazy"
             />
           </div>
           <h2 className={styles.heading}>AVTAR BRAR</h2>
@@ -110,6 +112,7 @@ const TeamSection = () => {
               height={"200"}
               alt="j"
               className={styles.image}
+              loading="lazy"
             />
           </div>
           <h2 className={styles.heading}>AVTAR BRAR</h2>
@@ -137,6 +140,7 @@ const TeamSection = () => {
               height={"200"}
               alt="j"
               className={styles.image}
+              loading="lazy"
             />
           </div>
           <h2 className={styles.heading}>AVTAR BRAR</h2>
@@ -164,6 +168,7 @@ const TeamSection = () => {
               height={"200"}
               alt="j"
               className={styles.image}
+              loading="lazy"
             />
           </div>
           <h2 className={styles.heading}>AVTAR BRAR</h2>

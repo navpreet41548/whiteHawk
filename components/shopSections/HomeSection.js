@@ -72,6 +72,7 @@ const HomeSection = () => {
               width="400"
               height={"400"}
               alt="Shop Home Image1"
+              loading="lazy"
             />
             <Image
               className={`${styles.image} ${styles.image2}`}
@@ -79,6 +80,7 @@ const HomeSection = () => {
               width="400"
               height={"400"}
               alt="Shop Home Image2"
+              loading="lazy"
             />
             <Image
               className={`${styles.image} ${styles.image3}`}
@@ -86,6 +88,7 @@ const HomeSection = () => {
               width="400"
               height={"400"}
               alt="Shop Home Image3"
+              loading="lazy"
             />
             <Image
               className={`${styles.image} ${styles.image4}`}
@@ -93,6 +96,7 @@ const HomeSection = () => {
               width="400"
               height={"400"}
               alt="Shop Home Image4"
+              loading="lazy"
             />
             <Image
               className={`${styles.image} ${styles.image5}`}
@@ -100,6 +104,7 @@ const HomeSection = () => {
               width="400"
               height={"400"}
               alt="Shop Home Image5"
+              loading="lazy"
             />
           </div>
         </div>
