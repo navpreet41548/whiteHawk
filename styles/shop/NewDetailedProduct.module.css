@@ -188,6 +188,8 @@
   color: #474747;
   font-size: 20px;
   padding: 7px 0;
+  position: relative;
+  z-index: 10;
 }
 
 .priceContainer {
@@ -258,6 +260,8 @@
   border: none;
   font-size: 16px;
   outline: none;
+  position: relative;
+  z-index: 10;
 }
 
 .descHeading {
@@ -282,6 +286,8 @@
   padding: 4px;
   margin-top: 15px;
   resize: none;
+  position: relative;
+  z-index: 10;
 }
 
 .adminActionButtonContainer {
@@ -395,7 +401,7 @@
   padding: 5px 10px;
   display: flex;
   align-items: center;
-  z-index: 3;
+  z-index: 2;
   cursor: pointer;
 }
 
