@@ -173,6 +173,11 @@
   font-size: 40px;
 }
 
+.info {
+  color: white;
+  font-size: 12px;
+}
+
 @media screen and (max-width: 1400px) {
   .ratioButtonContainer button {
     font-size: 12px;

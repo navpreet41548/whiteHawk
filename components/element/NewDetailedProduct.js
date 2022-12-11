@@ -259,8 +259,10 @@ const NewDetailedProduct = (props) => {
     console.log(dbData);
     if (!dbData.err) {
       setProductConfirm(false);
-      dispatch(removeCartItem(dbData.data._id));
-      dispatch(removeWishList(dbData.data._id));
+      if (dbData.data) {
+        dispatch(removeCartItem(dbData.data._id));
+        dispatch(removeWishList(dbData.data._id));
+      }
       Router.push(`/shop/products/allProducts`);
     }
   };

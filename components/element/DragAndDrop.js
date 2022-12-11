@@ -157,6 +157,7 @@ const DragAndDrop = (props) => {
           // multiple={true}
           onChange={handleChange}
           name="file"
+          accept="image/*"
         />
         <label
           id={styles.labelFileUpload}
@@ -168,6 +169,7 @@ const DragAndDrop = (props) => {
             <button className={styles.uploadButton} onClick={onButtonClick}>
               Select a file
             </button>
+            <p className={styles.info}>Only Upload Image</p>
           </div>
         </label>
         {dragActive && (

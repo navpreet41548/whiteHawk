@@ -12,9 +12,23 @@ export default async function handler(req, res) {
     try {
       const categorySlug = req.query.categorySlug;
       if (categorySlug == "allProducts") {
-        products = await Product.find({});
+        let dbProducts = await Product.find({});
+        for (let i = 0; i < dbProducts.length; i++) {
+          const element = dbProducts[i];
+          if (element.title) {
+            console.log(element.title);
+            products.push(element);
+          }
+        }
       } else {
-        products = await Product.find({ category: categorySlug });
+        let dbProducts = await Product.find({ category: categorySlug });
+        for (let i = 0; i < dbProducts.length; i++) {
+          const element = dbProducts[i];
+          if (element.title) {
+            console.log(element.title);
+            products.push(element);
+          }
+        }
       }
       if (products) {
         res.status(200).json({

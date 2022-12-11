@@ -52,7 +52,7 @@ const Contact = () => {
                   className={`${styles.faqContent} ${styles.open}`}
                   data-content
                 >
-                  If you have any issues or questions related to an item from
+                  If you have any issues or questions related to an item from{" "}
                   <span className={styles.color}>
                     https://brarscribbles.com
                   </span>
@@ -63,7 +63,7 @@ const Contact = () => {
                 </div>
               ) : (
                 <div className={`${styles.faqContent}`} data-content>
-                  If you have any issues or questions related to an item from
+                  If you have any issues or questions related to an item from{" "}
                   <span className={styles.color}>
                     https://brarscribbles.com
                   </span>
