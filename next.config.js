@@ -6,8 +6,8 @@ const nextConfig = {
     domains: ["res.cloudinary.com"],
   },
   env: {
-    BASE_URL: "http://localhost:3000",
-    // BASE_URL: "https://white-hawk.vercel.app",
+    // BASE_URL: "http://localhost:3000",
+    BASE_URL: "https://white-hawk.vercel.app",
     JWT_SECRET: "laksdjflaksdnvaasdjhflaksdjfh",
     // MongoDb: "mongodb://localhost:27017/whitehawk",
     SENDGRID_API_KEY:
