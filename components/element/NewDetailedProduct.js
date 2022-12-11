@@ -163,6 +163,10 @@ const NewDetailedProduct = (props) => {
       console.log("Greater");
       return setPriceErr("Discount Price Cannot be Greater the Actual Price ");
     }
+    if (inputValue.actualPrice == "" || inputValue.discountPrice == "") {
+      setLoading(false);
+      return setPriceErr("Price Cannot be Empty");
+    }
     if (inputValue.shortDesc.replace(/\s+/g, "").length <= 50) {
       setLoading(false);
       return setShortDescErr(

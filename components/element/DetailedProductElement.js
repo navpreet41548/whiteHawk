@@ -22,7 +22,7 @@ const DetailedProductElement = (props) => {
   const [quantity, setQuantity] = useState(1);
   const [user, setUser] = useState();
   const [buyLink, setBuyLink] = useState();
-
+  const [discount, setDiscount] = useState();
   const images = props.product.images;
 
   const imageClick = (imageSrc) => {
@@ -69,6 +69,12 @@ const DetailedProductElement = (props) => {
     const link = `https://api.whatsapp.com/send?phone=919463419478&text= "Hey There! I want to buy ${quantity} of ${props.product.title}`;
 
     setBuyLink(link);
+
+    setDiscount(
+      (100 * (props.product.actualPrice - props.product.discountPrice)) /
+        props.product.actualPrice
+    );
+
     const containObj = () => {
       for (let i = 0; i < cart.cartItem.length; i++) {
         const element = cart.cartItem[i];
@@ -140,8 +146,16 @@ const DetailedProductElement = (props) => {
 
         <div className={styles.priceContainer}>
           <h1>
-            MRP : <span className={styles.actualPrice}>$100</span>
-            <span className={styles.discountPrice}> $50</span>
+            MRP :{" "}
+            <span className={styles.actualPrice}>
+              {props.product.actualPrice}{" "}
+            </span>
+            <span className={styles.discountPrice}>
+              ₹{props.product.discountPrice}{" "}
+            </span>
+            {discount > 0 && (
+              <span className={styles.off}>{discount}% off</span>
+            )}
           </h1>
         </div>
 

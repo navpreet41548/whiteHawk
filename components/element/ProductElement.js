@@ -14,6 +14,7 @@ const ProductElement = (props) => {
   const [inWishlist, setInWishlist] = useState();
   const [inCart, setInCart] = useState();
   const [user, setUser] = useState();
+  const [discount, setDiscount] = useState();
 
   const handleWishlistAdd = () => {
     dispatch(addWishList(props.product._id));
@@ -39,6 +40,10 @@ const ProductElement = (props) => {
   };
 
   useEffect(() => {
+    setDiscount(
+      (100 * (props.product.actualPrice - props.product.discountPrice)) /
+        props.product.actualPrice
+    );
     const checkInclude = () => {
       for (let i = 0; i < wishlist.wishlistItem.length; i++) {
         const element = wishlist.wishlistItem[i];
@@ -130,10 +135,16 @@ const ProductElement = (props) => {
 
             <div className={styles.priceWrapper}>
               <div className={styles.priceContainer}>
-                <span className={styles.discountPrice}>$50</span>
-                <span className={styles.actualPrice}>100</span>
+                <span className={styles.discountPrice}>
+                  ₹{props.product.discountPrice}
+                </span>
+                <span className={styles.actualPrice}>
+                  ₹{props.product.actualPrice}
+                </span>
               </div>
-              <span className={styles.off}>50% off</span>
+              {discount > 0 && (
+                <span className={styles.off}>{discount}% off</span>
+              )}
             </div>
 
             <div className={styles.desc}>

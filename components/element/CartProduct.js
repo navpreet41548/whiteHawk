@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Router, useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { removeCartItem, updateCartItem } from "../../store/cartSlice";
 import styles from "/styles/shop/CartProduct.module.css";
@@ -10,6 +10,7 @@ const CartProduct = (props) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const [quantity, setQuantity] = useState(props.quantity);
+  const [discount, setDiscount] = useState();
 
   const handleQuantityChange = (e) => {
     const productId = props.product._id;
@@ -27,6 +28,13 @@ const CartProduct = (props) => {
     dispatch(removeCartItem(id));
     window.location.reload(false);
   };
+
+  useEffect(() => {
+    setDiscount(
+      (100 * (props.product.actualPrice - props.product.discountPrice)) /
+        props.product.actualPrice
+    );
+  }, []);
 
   return (
     <div className={styles.productContainer}>
@@ -69,13 +77,15 @@ const CartProduct = (props) => {
           <div className={styles.priceContainer}>
             <div className={styles.subContainer}>
               <span className={styles.discountPrice}>
-                ${props.product.discountPrice}
+                ₹{props.product.discountPrice}
               </span>
               <span className={styles.actualPrice}>
-                ${props.product.actualPrice}
+                ₹{props.product.actualPrice}
               </span>
             </div>
-            <span className={styles.off}>50% off</span>
+            {discount > 0 && (
+              <span className={styles.off}>{discount}% off</span>
+            )}
           </div>
 
           <p className={styles.shortDesc}>{props.product.shortDesc}</p>

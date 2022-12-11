@@ -93,3 +93,20 @@ const CategorySection = (props) => {
 };
 
 export default CategorySection;
+
+// export async function getServerSideProps(context) {
+//   const data = await fetch(`${process.env.BASE_URL}/api/shop/category`, {
+//     method: "GET",
+//   });
+//   const dbData = await data.json();
+//   if (!dbData.err) {
+//     return {
+//       props: { categories: dbData.data }, // will be passed to the page component as props
+//     };
+//   }
+//   if (dbData.err) {
+//     return {
+//       props: { categories: {} }, // will be passed to the page component as props
+//     };
+//   }
+// }
