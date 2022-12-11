@@ -59,7 +59,7 @@ const Header = () => {
     setLogout(true);
   };
   const handleLogin = () => {
-    Router.push(`/shop/home`);
+    Router.push(`/`);
     dispatch(updateForm({ login: true, visible: true }));
   };
 
@@ -77,7 +77,7 @@ const Header = () => {
 
       dispatch(updateForm({ login: false, visible: false }));
       dispatch(removeUser());
-      Router.push(`/shop/home`);
+      Router.push(`/`);
     }
   };
 
