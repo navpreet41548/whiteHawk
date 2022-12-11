@@ -41,7 +41,11 @@ export default async function handler(req, res) {
           data: savedUser,
         });
       } catch (err) {
-        res.json({ err: err.message, message: null, data: null });
+        res.json({
+          err: err.message,
+          message: "Something Went Wrong",
+          data: null,
+        });
       }
     }
   }

@@ -47,7 +47,7 @@ export default async function handler(req, res) {
           });
         }
       } catch (err) {
-        res.json({ err: err.message });
+        res.json({ err: err.message, message: "Something Went Wrong" });
       }
     }
   }

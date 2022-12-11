@@ -440,6 +440,7 @@
     margin-right: 10%;
     padding: 7px 0px;
     font-size: 13px;
+    text-align: center;
   }
 }
 
@@ -461,7 +462,7 @@
 
   .imageContainer {
     display: flex;
-    bottom: -30px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
@@ -469,19 +470,15 @@
   }
 
   .smallImageWrapper {
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
     background-color: #1e1e1e;
-  }
-
-  .smallImage {
-    display: none;
   }
 
   .right {
     width: 100%;
     margin-left: 0;
-    margin-top: 30px;
+    margin-top: 50px;
   }
 
   .buttonSubContainer {

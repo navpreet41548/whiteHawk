@@ -28,7 +28,6 @@ const Home = (props) => {
 export default Home;
 
 export async function getServerSideProps(context) {
-  console.log(process.env.BASE_URL);
   const data = await fetch(`${process.env.BASE_URL}/api/shop/category`, {
     method: "GET",
   });

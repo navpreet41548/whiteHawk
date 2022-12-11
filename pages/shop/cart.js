@@ -103,10 +103,11 @@ export async function getServerSideProps(context) {
         `${process.env.BASE_URL}/api/shop/product/productById/${element.productId}`
       );
       const dbData = await data.json();
-      if (!dbData.err) {
+      if (dbData.data) {
+        console.log(dbData);
         dbData.data.quantity = element.quantity;
         products.push(dbData.data);
-        const price = element.quantity * dbData.data.discountPrice;
+        let price = element.quantity * dbData.data.discountPrice;
         prices.push(price);
       }
     }
