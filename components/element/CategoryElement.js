@@ -287,6 +287,7 @@ const CategoryElement = (props) => {
                 id="file"
                 class={styles.file}
                 onChange={(e) => handleFileChange(e)}
+                accept="image/*"
               />
               <label for="file">Select file</label>
               {!edit && <button onClick={() => handleSubmit()}>Create</button>}

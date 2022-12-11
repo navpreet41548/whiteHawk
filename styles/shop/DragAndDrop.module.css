@@ -194,4 +194,8 @@
   .submitButton {
     font-size: 14px;
   }
+  .info {
+    color: white;
+    font-size: 10px;
+  }
 }
