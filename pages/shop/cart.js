@@ -12,16 +12,33 @@ import Link from "next/link";
 const Cart = (props) => {
   const cart = useSelector((state) => state.cart);
   const [total, setTotal] = useState();
+  const [buyLink, setBuyLink] = useState();
   let prices = [];
 
   useEffect(() => {
+    let link = "https://api.whatsapp.com/send?phone=919463419478&text=";
+    let productString = `
+    Hey There!
+    I want to buy 
+    `;
     for (let i = 0; i < cart.cartItem.length; i++) {
       const element = cart.cartItem[i];
       prices.push(element.total);
     }
     const sum = prices.reduce((partialSum, a) => partialSum + a, 0);
     setTotal(sum);
-  }, [cart]);
+    // setBuyLink();
+    for (let i = 0; i < props.products.length; i++) {
+      const element = props.products[i];
+      // console.log(element.quantity);
+      let num = i + 1;
+      productString +=
+        num + ")" + " " + element.quantity + "of These " + element.title;
+      // setBuyLink(element.productSlug);
+      // console.log(productString);
+    }
+    setBuyLink(link + productString);
+  }, [cart.cartItem, props.products, prices]);
 
   return (
     <Layout>
@@ -52,7 +69,9 @@ const Cart = (props) => {
                 <p>${total}</p>
               </div>
 
-              <button className={styles.summaryButton}>BUY VIA WHATSAPP</button>
+              <a href={buyLink} className={styles.summaryButton}>
+                BUY VIA WHATSAPP
+              </a>
             </div>
           </div>
         </div>

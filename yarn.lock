@@ -936,6 +936,11 @@
   "resolved" "https://registry.npmjs.org/@types/node/-/node-18.11.9.tgz"
   "version" "18.11.9"
 
+"@types/nprogress@^0.2.0":
+  "integrity" "sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A=="
+  "resolved" "https://registry.npmjs.org/@types/nprogress/-/nprogress-0.2.0.tgz"
+  "version" "0.2.0"
+
 "@types/prop-types@*":
   "integrity" "sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w=="
   "resolved" "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
@@ -2841,7 +2846,7 @@
   "resolved" "https://registry.npmjs.org/next-redux-wrapper/-/next-redux-wrapper-8.0.0.tgz"
   "version" "8.0.0"
 
-"next@>=9", "next@13.0.2":
+"next@>= 6.0.0", "next@>=9", "next@13.0.2":
   "integrity" "sha512-uQ5z5e4D9mOe8+upy6bQdYYjo/kk1v3jMW87kTy2TgAyAsEO+CkwRnMgyZ4JoHEnhPZLHwh7dk0XymRNLe1gFw=="
   "resolved" "https://registry.npmjs.org/next/-/next-13.0.2.tgz"
   "version" "13.0.2"
@@ -2866,6 +2871,15 @@
     "@next/swc-win32-arm64-msvc" "13.0.2"
     "@next/swc-win32-ia32-msvc" "13.0.2"
     "@next/swc-win32-x64-msvc" "13.0.2"
+
+"nextjs-progressbar@^0.0.16":
+  "integrity" "sha512-GV0fD38EMD3vSDCmkq+tObmoup6QA91a6a9MxGuhJZuRk/9TNsrHGnIQQQ/sggkMkXuT4fBgF6jRjFwScDT3zA=="
+  "resolved" "https://registry.npmjs.org/nextjs-progressbar/-/nextjs-progressbar-0.0.16.tgz"
+  "version" "0.0.16"
+  dependencies:
+    "@types/nprogress" "^0.2.0"
+    "nprogress" "^0.2.0"
+    "prop-types" "^15.8.1"
 
 "node-abi@^3.3.0":
   "integrity" "sha512-qWO5l3SCqbwQavymOmtTVuCWZE23++S+rxyoHjXqUmPyzRcaoI4lA2gO55/drddGnedAyjA7sk76SfQ5lfUMnw=="
@@ -2943,6 +2957,11 @@
   "version" "4.0.1"
   dependencies:
     "path-key" "^3.0.0"
+
+"nprogress@^0.2.0":
+  "integrity" "sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA=="
+  "resolved" "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz"
+  "version" "0.2.0"
 
 "object-assign@^4.1.1":
   "integrity" "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg=="
@@ -3291,7 +3310,7 @@
   dependencies:
     "@remix-run/router" "1.0.3"
 
-"react@*", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=15", "react@>=16.8", "react@18.2.0":
+"react@*", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^18.2.0", "react@>= 16.0.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=15", "react@>=16.8", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

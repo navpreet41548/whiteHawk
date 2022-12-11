@@ -9,6 +9,7 @@ const ContactForm = () => {
     subject: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const [message, setMessage] = useState("");
   const [err, setErr] = useState({
@@ -52,6 +53,9 @@ const ContactForm = () => {
     if (formData.message == "") {
       return setErr({ messageErr: "Please Enter Message" });
     }
+
+    setLoading(true);
+
     const data = await fetch(`${process.env.BASE_URL}/api/contact`, {
       method: "POST",
       headers: {
@@ -72,13 +76,23 @@ const ContactForm = () => {
         messageErr: "",
         randomErr: "",
       });
+      setLoading(false);
     }
     if (dbData.err) {
+      setLoading(false);
+
       setErr({ ...err, randomErr: "Something Went Wrong" });
     }
   };
   return (
     <div className={styles.formContainer}>
+      {loading && (
+        <div className={styles.loadingContainer}>
+          <div className={styles.loading}>
+            <i class="bx bx-loader-alt bx-spin"></i>
+          </div>
+        </div>
+      )}
       {message && (
         <div className={styles.messageContainer}>
           <div className={styles.messageSubContainer}>

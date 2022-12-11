@@ -88,6 +88,8 @@
   border-radius: 3px;
   cursor: pointer;
   font-size: 17px;
+  display: inline-block;
+  text-align: center;
 }
 
 .breadCrumb {

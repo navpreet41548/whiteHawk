@@ -21,6 +21,7 @@ const DetailedProductElement = (props) => {
   const [isAddMore, setIsAddMore] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [user, setUser] = useState();
+  const [buyLink, setBuyLink] = useState();
 
   const images = props.product.images;
 
@@ -44,6 +45,7 @@ const DetailedProductElement = (props) => {
       productId,
       quantity,
       price: props.product.discountPrice,
+      total: quantity * props.product.discountPrice,
     };
     dispatch(addCartItem(productDetail));
   };
@@ -51,6 +53,8 @@ const DetailedProductElement = (props) => {
   const handleCartRemove = (productId) => {
     dispatch(removeCartItem(productId));
   };
+
+  // https://api.whatsapp.com/send?phone=919463419478&text=http://localhost:3000/shop/product/product-1-on-mongodb-cluster-product-1-on-mongodb-cluster-product-1-on-mongodb-cluster
 
   useEffect(() => {
     // for (let i = 0; i < cart.cartItem.length; i++) {
@@ -61,6 +65,10 @@ const DetailedProductElement = (props) => {
     //     setInCart(false);
     //   }
     // }
+
+    const link = `https://api.whatsapp.com/send?phone=919463419478&text= "Hey There! I want to buy ${quantity} of ${props.product.title}`;
+
+    setBuyLink(link);
     const containObj = () => {
       for (let i = 0; i < cart.cartItem.length; i++) {
         const element = cart.cartItem[i];
@@ -73,7 +81,7 @@ const DetailedProductElement = (props) => {
     setInCart(containObj());
     setUser(userState.user);
     // cart.cartItem.includes(element.productId)
-  }, [cart.cartItem, props.product._id, userState]);
+  }, [cart.cartItem, props.product, userState]);
 
   return (
     <div className={styles.productContainer}>
@@ -157,22 +165,24 @@ const DetailedProductElement = (props) => {
             </div>
           </div>
           <div className={styles.buttonSubContainer}>
-            <button className={styles.button}>BUY VIA WHATSAPP</button>
+            <a href={buyLink} className={styles.button}>
+              BUY VIA WHATSAPP
+            </a>
 
             {inCart ? (
-              <button
+              <a
                 className={styles.button}
                 onClick={() => handleCartRemove(props.product._id)}
               >
                 REMOVE FROM CART
-              </button>
+              </a>
             ) : (
-              <button
+              <a
                 className={styles.button}
                 onClick={() => handleCartAdd(props.product._id)}
               >
                 ADD TO CART
-              </button>
+              </a>
             )}
           </div>
         </div>
