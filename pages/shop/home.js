@@ -5,6 +5,7 @@ import CategorySection from "../../components/shopSections/CategorySection";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import LoginSection from "../../components/sections/LoginSection";
+import Head from "next/head";
 
 const Home = (props) => {
   const formState = useSelector((state) => state.formSlice);
@@ -16,6 +17,9 @@ const Home = (props) => {
 
   return (
     <Layout>
+      <Head>
+        <title>whitehawk academy model town</title>
+      </Head>
       <HomeSection />
       <CategorySection categories={props.categories} />
       {isVisible && isVisible.visible && (

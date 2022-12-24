@@ -22,6 +22,9 @@ export default function Home() {
 
   return (
     <Layout>
+      <Head>
+        <title>whitehawk academy model town</title>
+      </Head>
       <div className={styles.wrapper}>
         <HomeSection />
         <AboutSection />
